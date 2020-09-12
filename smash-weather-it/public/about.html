@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Smash-it WeatherDetector</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./bootstrap.css">
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="shortcut icon" href="ico.gif" type="image/x-icon" />
+		<meta name="theme-color" content="#0b191e" />
+		<link rel="apple-touch-icon" sizes="640x640" href="imgs/icon-mask.png" />
+		<link rel="manifest" href="manifest.json" />
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	</head>
+<body>
+    <div class="about-major ">
+        <div class="header">
+            <div class="navbar bg-dark text-light d-flex justify-content-between align-content-center sticky-top mx-0 my-2" >
+    <div class="nav-brand">
+    <h1 class="h1">Smash It</h1>
+    </div>
+                <ul style="list-style-type: none;" class="d-flex list-group flex-row justify-content-between ml-auto">
+                    <li class="list-item"><a class="nav-link text-light" href="./index.html">Home</a></li>
+                    <li class="list-item"><a class="nav-link text-light" target="_blank" href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="breadcrumb d-block flex-column">
+            <h3 class="text-primary">Smash It: </h3>
+            <hr class="bg-warning">
+            <p>
+                Founded by <i class="text-success">Mr. Sylvester Presly</i>, He is create an outdoor Event and this Weather App is highly compatible to all devices and reachout to all cities and Towns.
+            </p>
+        </div>
+    
+        <div class="footer breadcrumb">
+            <p>Developed by: <a href="#">RENNY KHAUKHA</a></p>
+            <p>Proudly Sponsored by: #GADS2020 and @Andela_Learning_community</p>
+            <p>@&copy; 2020, All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker
+            .register("sw.js")
+            .then((reg) => {
+                // console.log("Registered");
+            })
+            .catch((err) => {
+                // console.log("Registration failed: ", err);
+            });
+    });
+}
+</script>
+</html>

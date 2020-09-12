@@ -1,0 +1,30 @@
+{
+  "name": "Xweather",
+  "short_name": "Xweather",
+  "start_url": "https://xweather-85515.web.app/",
+  "display": "standalone",
+  "background_color": "#0b191e",
+  "theme_color": "#0b191e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://xweather-85515.web.app/imgs/icon-mask.png",
+      "type": "image/png",
+      "sizes": "640x640"
+    }
+  ],
+  "url": "https://xweather-85515.web.app/",
+  "lang": "",
+  "screenshots": [
+    {
+      "src": "[Embedded]",
+      "sizes": "1280x800",
+      "type": "image/png"
+    },
+    {
+      "src": "[Embedded]",
+      "sizes": "750x1334",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Smash-it WeatherDetector</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./bootstrap.css">
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="shortcut icon" href="ico.gif" type="image/x-icon" />
+		<meta name="theme-color" content="#0b191e" />
+		<link rel="apple-touch-icon" sizes="640x640" href="imgs/icon-mask.png" />
+		<link rel="manifest" href="manifest.json" />
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	</head>
+
+	<body>
+		
+		<div class="header">
+			<div class="navbar bg-dark text-light d-flex justify-content-between align-content-center sticky-top opacity-7" >
+<div class="nav-brand">
+	<h1 class="h1">Smash It</h1>
+</div>
+				<ul style="list-style-type: none;" class="d-flex list-group flex-row justify-content-between ml-auto">
+					<li class="list-item"><a class="nav-link text-light" href="./index.html">Home</a></li>
+					<li class="list-item"><a class="nav-link text-light" target="_blank" href="./about.html">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<main id="main">
+			<div id="search">
+				<h2 id="app-name"><small>Current Weather Finder</small></h2>
+				<form>
+					<div class="fg">
+						<input
+							type="text"
+							id="city_search"
+							value="New York City"
+							placeholder="find City"
+							autocomplete="off"
+						/>
+						<i class="material-icons">search</i>
+					</div>
+					<h1 id="fbk"><emp>Enter a city to search!</emp></h1>
+				</form>
+
+				<section id="search_results">
+					<div style="padding: 0.8rem 0">
+						<label for="">Recent Searches</label>
+						<hr />
+					</div>
+					<div id="latest_sr"></div>
+				</section>
+			</div>
+
+			<section id="loader">
+				<lottie-player
+					src="https://assets6.lottiefiles.com/packages/lf20_cHA3rG.json"
+					background="transparent"
+					speed="2.5"
+					style="width: 100px; height: 100px"
+					loop
+					autoplay
+				></lottie-player>
+			</section>
+			<div id="weather-info">
+				<section id="top">
+					<h2 id="city_name"></h2>
+					<h4 id="day"></h4>
+					<div>
+						<div style="display: flex; justify-content: center">
+							<h1 id="celsius" style="align-self: center"></h1>
+							<img alt="" id="w-img" />
+						</div>
+						<!-- <h1 id="farenheit"></h1> -->
+						<p id="w-desc"></p>
+					</div>
+				</section>
+
+				<section style="align-self: stretch" id="more-weather-details">
+					<p id="feels_like">
+						<span>
+							<img src="imgs/temperature.svg" alt="" class="icns" />Feels like
+						</span>
+						<label> </label>
+					</p>
+					<p id="humidity">
+						<span>
+							<img src="imgs/humidity.svg" alt="" class="icns" />Humidity
+						</span>
+						<label> </label>
+					</p>
+					<p id="sunrise">
+						<span>
+							<img src="imgs/sunrise.svg" alt="" class="icns" />Sunrise
+						</span>
+						<label> </label>
+					</p>
+					<p id="sunset">
+						<span>
+							<img src="imgs/sunset.svg" alt="" class="icns" />Sunset
+						</span>
+						<label> </label>
+					</p>
+				</section>
+			</div>
+		</main>
+		<div class="footer mb-0 pd-0">
+			<p>Developed by: <a href="#">RENNY KHAUKHA</a></p>
+			<p>Proudly Sponsored by: #GADS2020 and @Andela_Learning_community</p>
+			<p>@&copy; 2020, All Rights Reserved</p>
+		</div>
+	</body>
+
+	<script src="app.js"></script>
+	<script>
+		if ("serviceWorker" in navigator) {
+			window.addEventListener("load", function () {
+				navigator.serviceWorker
+					.register("sw.js")
+					.then((reg) => {
+						// console.log("Registered");
+					})
+					.catch((err) => {
+						// console.log("Registration failed: ", err);
+					});
+			});
+		}
+	</script>
+</html>
